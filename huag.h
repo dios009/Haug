@@ -82,8 +82,8 @@ sqrt(E2*E2-1.);
 
 double x2min (double E2, double k, double p2){
     return
-((E2-1.)*k-E2+1.)/(p2*k); 
-}
+((E2-1.)*k+E2+1.)/(p2*k); 
+} //version corregida del Maple original
 
 /*
 double thetamax (double xmin){
