@@ -7,7 +7,7 @@
 #include <math.h>
 #include "huag.h"
 
-#define K 50.
+#define K 10.
 #define EMIN emin(K)
 #define EMAX emax(K)
 
@@ -105,15 +105,15 @@ p2/(k*ro(E2,k,p2,x2))*(M0(k1(k),k2(E2,k,p2,x2),ro(E2,k,p2,x2),tau(E2))
 int main() {
 
 	FILE *fptr;
-	fptr = fopen("datos-mc-Huag-v2.dat","w");
+	fptr = fopen("d2.dat","w");
 
 int j,i;
 long init = -1;
 double count2 = 0.;
 double E2=0.;
 
-double NEVAL = 10000.;
-double DIV = 1000.;
+double NEVAL = 1000.;
+double DIV = 100.;
 
 for (j= 1; j<DIV; j++){
 double count = 0.;
