@@ -108,7 +108,7 @@ int main() {
 int i;
 long init = -1;
 
-double NEVAL = 100000000.;
+double NEVAL = 1000000000.;
 
 double count = 0.;
 for (i = 1; i < NEVAL+1 ; ++i)
