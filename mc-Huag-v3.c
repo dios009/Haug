@@ -7,7 +7,7 @@
 #include <math.h>
 #include "huag.h"
 
-#define K 2000.
+#define K 100.
 #define EMIN emin(K)
 #define EMAX emax(K)
 
