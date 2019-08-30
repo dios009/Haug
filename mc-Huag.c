@@ -6,7 +6,7 @@
 #include <math.h>
 #include "huag.h"
 
-#define K 10.
+#define K 100.
 
 #define IM1 2147483563
 #define IM2 2147483399
@@ -101,15 +101,15 @@ double MM (double E2, double k, double p2, double x2){
 int main() {
 
 	FILE *fptr;
-	fptr = fopen("datos-mc-Huag.dat","w");
+	fptr = fopen("datos-mc-Huag-k100.dat","w");
 
 int j,i;
 long init = -1;
 double count2 = 0.;
 double E2=emin(K);
 
-double NEVAL = 1000000.;
-double DIV = 1000.;
+double NEVAL = 10000000.;
+double DIV = 2000.;
 
 for (j= 1; j<DIV; j++){
 double count = 0.;
@@ -121,7 +121,7 @@ for (i = 1; i < NEVAL+1 ; ++i)
 	count += MM(E2,K,p2,x2);
 	//printf("%f \t %f \t %f \t %f \n", x2, E2, p2, MM(E2, K, p2, x2));
   }
-  printf("E2 = %f \t count = %f \n", E2,count/NEVAL);
+  //printf("E2 = %f \t count = %f \n", E2,count/NEVAL);
   fprintf(fptr,"%f \t %f \n",E2,count/NEVAL);
   count2 +=count/NEVAL;
 }
