@@ -108,7 +108,7 @@ long init = -1;
 double count2 = 0.;
 double E2=emin(K);
 
-double NEVAL = 1000000.;
+double NEVAL = 10000000.;
 double DIV = 2000.;
 
 for (j= 1; j<DIV; j++){
