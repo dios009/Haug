@@ -114,7 +114,7 @@ double count2 = 0.;
 double x2=0.;
 
 double NEVAL = 2000000.;
-double DIV = 2000.;
+double DIV = 1000.;
 
 for (j= 1; j<DIV; j++){
 double count = 0.;
@@ -126,7 +126,8 @@ for (i = 1; i < NEVAL+1 ; ++i)
 	count += MM(EMIN+(EMAX-EMIN)*E2,K,p2,(1.-x2min(EMIN+(EMAX-EMIN)*E2,K,p2))*x2+x2min(EMIN+(EMAX-EMIN)*E2,K,p2))*(1.-x2min(EMIN+(EMAX-EMIN)*E2,K,p2))*(EMAX-EMIN);//definida en el hypercubo unitario
 	//printf("%f \t %f \t %f \t %f \n", x2, E2, p2, MM(E2, K, p2, x2));
   }
-  printf("E2 = %f \t count = %f \n", x2,count/NEVAL);
+  //printf("E2 = %f \t count = %f \n", x2,count/NEVAL);
+  printf("E2 = %f \t", x2);
   fprintf(fptr,"%f \t %f \n",x2,count/NEVAL);
   count2 +=count/NEVAL;
 }
